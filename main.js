@@ -9,6 +9,8 @@ setInterval(function(){
 		$(e.currentTarget).removeClass('leave').addClass('enter')
 	})
 	$(`img:nth-child(${count(n+1)})`).removeClass('enter').addClass('current')
+	// 等同于： $(`img:nth-child(`+count(n+1)+`)`).removeClass('enter').addClass('current')
+	// 等同于： $('img:nth-child('+count(n+1)+')').removeClass('enter').addClass('current')
 	n =n+1
 }, 1000)
 
